@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html manifest="index_inside.appcache">
+<head>
+	<meta charset="UTF-8">
+	<title>ARTsite</title>
+	<link rel="stylesheet" href="../main.css" type="text/css">
+	<script src="../js/main.js"></script>
+	<script type="text/javascript">
+		function fill_profile_info(){
+			getLocation();
+			document.getElementById("artist_name").value = localStorage.getItem('name');
+			document.getElementById("artist_password").value = localStorage.getItem('password');
+			document.getElementById("artist_email").value = sessionStorage.getItem('email');
+			document.getElementById("artist_phone").value = sessionStorage.getItem('phone');
+		}
+		
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition, showError);
+			} else {
+				alert("Geolocation is not supported by this browser.");
+			}
+		}
+		
+		
+		function showPosition(position) {
+			var latlon = position.coords.latitude + "," + position.coords.longitude;
+			var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+			+latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+			document.getElementById("map").innerHTML = "<img src='"+img_url+"'>";
+		}
+		
+		function showError(error) {
+			switch(error.code) {
+				case error.PERMISSION_DENIED:
+					alert("User denied the request for Geolocation.");
+					break;
+				case error.POSITION_UNAVAILABLE:
+					alert("Location information is unavailable.");
+					break;
+				case error.TIMEOUT:
+					alert("The request to get user location timed out.");
+					break;
+				case error.UNKNOWN_ERROR:
+					alert("An unknown error occurred.");
+					break;
+			}
+		}
+		
+		function validate_p_form(){
+			var form = document.getElementById('profile_form').value;
+			var name = document.getElementById('artist_name').value;
+			var password = document.getElementById('artist_password').value;
+			var email = document.getElementById('artist_email').value;
+			var phone = document.getElementById('artist_phone').value;
+			
+			var valid_phone = RegExp(/^0[0-9]{2}-[0-9]{3}-[0-9]{3}\b/).test(phone);
+			console.log(valid_phone);
+			if(valid_phone){
+				localStorage.setItem('name', name);
+				localStorage.setItem('password', password);
+				sessionStorage.setItem('email', email);
+				sessionStorage.setItem('phone', phone);
+				alert('Saved successfully.');
+			}else{
+				alert('Wrong phone number format, please use this format ###-###-###');
+			}
+		}
+	</script>
+	<style>
+		#profile_form{
+			text-align: center;
+		}
+		
+		#profile_form input{
+			width: 300px;
+		}
+		
+		#profile_form input[type="button"]{
+			width: 80px;
+			height: 40px;
+			background-color: darkblue;
+			color: white;
+		}
+	</style>
+</head>
+<body onload="fill_profile_info()">
+	<div id="logo1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<img id="logo" draggable="true" ondragstart="drag(event)" src="../images/aslogo.png" />
+	</div>
+	<div id="logo2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="image"></div>
+	<header>
+		<nav>
+		  <ul>
+			<li><a href="../indexin.html">Home</a></li>
+			<li><a href="picture.html">Picture</a></li>
+			<li><a href="sculpture.html">Sculpture</a></li>
+			<li><a href="../posts/exhibition.html">Exhibition</a></li>
+			<li><a href="#">My Profile</a></li>
+			<li><a href="../login.html">Logout</a></li>
+		  </ul>
+		</nav>
+	</header>
+	<br>
+	<div id="container">
+		<h1>My Profile</h1>
+		<form id="profile_form">
+			<label for="artist_name">Artist name: </label><br>
+			<input type="text" id="artist_name" name="artist_name"><br>
+			<label for="artist_password">Artist password: </label><br>
+			<input type="password" id="artist_password" name="artist_password"><br>
+			<label for="artist_email">Artist email: </label><br>
+			<input type="email" id="artist_email" name="artist_email"><br>
+			<label for="artist_phone">Artist phone: </label><br>
+			<input type="textfield" id="artist_phone" name="artist_phone"><br><br>
+			<input type="button" onclick="validate_p_form()" value="Save">
+			<div id="map" style="height: 300px;"></div>
+		</form>
+		<br>
+	</div>
+	
+	<footer>
+		<p>Copyrights © <a href="mailto:info@grupi5.com">Grupi 5</a></p>
+	</footer>
+</body>
+</html>

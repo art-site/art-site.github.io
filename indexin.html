@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html manifest="index_inside.appcache">
+<head>
+	<meta charset="UTF-8">
+	<title>ARTsite</title>
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<script src="js/main.js"></script>
+</head>
+<body>	
+	<div id="logo1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<img id="logo" draggable="true" ondragstart="drag(event)" src="images/aslogo.png" />
+	</div>
+	<div id="logo2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="image"></div>
+	<header>
+		<nav>
+		  <ul>
+			<li><a href="indexin.html">Home</a></li>
+			<li><a href="pages/picture.html">Picture</a></li>
+			<li><a href="pages/sculpture.html">Sculpture</a></li>
+			<li><a href="posts/exhibition.html">Exhibition</a></li>
+			<li><a href="pages/myprofile.html">My Profile</a></li>
+			<li><a href="login.html">Logout</a></li>
+		  </ul>
+		</nav>
+	</header>
+	<br>
+	<div id="container">
+		<p id="welcome"></p>
+		<br>
+		<form id="addpostform">
+			Category: <br>
+			<input type="radio" name="category" value="picture" checked> Picture
+			<input type="radio" name="category" value="sculpture"> Sculpture
+			<input type="radio" name="category" value="veffects"> Visual Effects
+			<input type="radio" name="category" value="photo"> Photo
+			<br>
+			Title: <br><input type="text" name="title">
+			<br>
+			Description: <br><textarea rows="6" cols="100" name="description"></textarea><br>
+			Image: <br><input type="file" name="file"><br>
+			<input type="submit" value="Add" id="submitPostButton">
+		</form>
+		<br>
+		<hr>
+		<div id="homepage">
+			<p style="text-align: left;">Mostly viewed</p>
+			<ul>
+				<li class="cereku"><img src="images/article/21.jpg" width="200" height="150" alt=""></li>
+				<li class="cereku"><img src="images/article/32.jpg" width="200" height="150" alt=""></li>
+				<li class="cereku"><img src="images/article/13.jpg" width="200" height="150" alt=""></li>
+				<li class="cereku c_fundit"><img src="images/article/44.jpg" width="200" height="150" alt=""></li>
+			</ul>
+			<p><a href="#">View all articles &raquo;</a></p>
+			<hr>
+			<br>
+			<ul>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/11.jpg" width="64" height="64" alt="Go to article...">
+
+						<a href="posts/post1.html"><strong>I ESCAPE MY FEARS AND SPEND HOURS PAINTING...</strong></a>
+						<p>
+						Using visual cues from the life around me and combining them with past mistakes, the practice of self-love and world travel, I use painting as a win...
+						</p>
+						<p><a href="posts/post1.html">Read more &raquo;</a></p>
+					</div>
+				</li>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/21.jpg" width="64" height="64" alt="">
+
+						<a href="posts/post2.html"><strong>FELIX TELLS HIS LIFE STORY THROUGH...</strong></a>
+						<p>
+						Sudied and stumbled upon a jewish painter who tells his life story through painfully sad self-portraits. Painter who tells his life story...
+						</p>
+						<p><a href="posts/post2.html">Read more &raquo;</a></p>
+					</div>
+				</li>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/31.jpg" width="64" height="64" alt="">
+
+						<a href="posts/post3.html"><strong>I UPCYCLE OLD LOUIS VUITTON BAGS...</strong></a>
+						<p>
+						My passion for working with metal and mechanical objects has been essential in the evolution of my art. It provides...
+						</p>
+						<p><a href="posts/post3.html">Read more &raquo;</a></p>
+					</div>
+				</li>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/41.jpg" width="64" height="64" alt="">
+
+						<a href="posts/post4.html"><strong>I TAKE PICTURES THAT LOOK LIKE...</strong></a>
+						<p>
+						My name is Davide Sasso and I love photography. Japan is a country that I love and I hope one day to be able to go there. I love ja...
+						</p>
+						<p><a href="posts/post1.html">Read more &raquo;</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script>
+		var name = localStorage.getItem('name');
+		document.getElementById('welcome').innerHTML = "You have logged in as : " + name;
+	</script>
+	
+	<footer>
+		<p>
+		Copyrights © <a href="mailto:info@grupi5.com">Grupi 5</a>
+		<svg width="32" height="32" class="bottom_rotation">
+			<rect width="32" height="32" fill="#979797" />
+		</svg>
+		</p>
+	</footer>
+</body>
+</html>

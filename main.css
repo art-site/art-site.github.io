@@ -1,0 +1,175 @@
+body {
+	font-size: 20px;
+	font-family: "Times New Roman";
+	color: #979797;
+}
+#image {
+	background-image: url(images/bg.jpg);
+	height: 450px;
+	background-repeat: no-repeat;
+	background-size:cover;
+	margin: -8px;
+	background-position: center center;
+}
+
+#logo1 {
+	width: 280px;
+	height: 280px;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	border: 1px dotted rgba(192, 192, 192, .3);
+}
+
+#logo2 {
+	width: 280px;
+	height: 280px;
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	border: 1px dotted rgba(192, 192, 192, .3);
+}
+
+#container{
+	display: block; 
+	width:960px;
+	margin:0 auto;
+	text-align: center;
+}
+
+header {
+	display: block; 
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+nav {
+	display: block;
+	margin-top: -90px;
+	padding: 5px 0;
+	color: #C0BAB6;
+	background: linear-gradient(to bottom right, #3f3f3f 60%, white)
+}
+
+nav li {
+	display: inline;
+	margin-right: 25px;
+	text-transform: uppercase;
+}
+
+nav li ul a {
+	color: #C0BAB6;
+	background-color: #232323;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+}
+
+#pershkrimi {
+	text-overflow: ellipsis;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+a:link {
+	text-decoration: none;
+	outline: none;
+	color: #C0BAB6;
+}
+
+a:visited {
+	color: #C0BAB6;
+}
+
+a:hover {
+	color: #FF9900;
+}
+
+a:active{
+	color: #C0BAB6;
+}
+
+.cereku {
+	display: inline;
+	list-style-type: none;
+	margin:0 20px 0 0;
+}
+
+.c_fundit {
+	margin-right: 0;
+}
+
+.cereku img {
+	padding: 4px;
+	border: 1px solid #D6D6D6;
+}
+
+#homepage ul {
+	padding-left: 0px;
+}
+
+#homepage p {
+	text-align: right;
+}
+
+@keyframes animacioni1 {
+	0% { background-color: white; }
+	25% { background-color: lightgrey; }
+	40% { background-color: white; }
+	50% { background-color: lightgrey; }
+	80% { background-color: white; }
+	100% { background-color: white; }
+}
+
+#addpostform {
+	text-align: left;
+	animation-name: animacioni1;
+	animation-duration: 1s;
+}
+
+#submitPostButton {
+	padding: 5px 20px 5px 20px;
+}
+
+.smallpost {
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+	font-size: 16px;
+	text-align: left;
+}
+
+.smallpost img {
+	float: left;
+	margin-right: 5px;
+}
+
+footer {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	text-align: left;
+	background-color: #232323;
+}
+
+footer p {
+	padding-left: 20px;
+}
+
+footer p svg {
+	float: right;
+	margin-right: 10px;
+}
+
+footer p canvas {
+	float: right;
+	margin-right: 10px;
+}
+
+.bottom_rotation {
+	transform: rotate(45deg);
+}

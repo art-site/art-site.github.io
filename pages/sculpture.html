@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html manifest="index_inside.appcache">
+<head>
+	<meta charset="UTF-8">
+	<title>ARTsite</title>
+	<link rel="stylesheet" href="../main.css" type="text/css">
+	<script src="../js/main.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				$("video").toggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="logo1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<img id="logo" draggable="true" ondragstart="drag(event)" src="../images/aslogo.png" />
+	</div>
+	<div id="logo2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="image"></div>
+	<header>
+		<nav>
+		  <ul>
+			<li><a href="../indexin.html">Home</a></li>
+			<li><a href="picture.html">Picture</a></li>
+			<li><a href="sculpture.html">Sculpture</a></li>
+			<li><a href="../posts/exhibition.html">Exhibition</a></li>
+			<li><a href="myprofile.html">My Profile</a></li>
+			<li><a href="../login.html">Logout</a></li>
+		  </ul>
+		</nav>
+	</header>
+	<br>
+	<div id="container">
+		<h1>Sculptures</h1>
+		<button>Shfaq ose fsheh videon</button><br>
+		<video width="800px" height="600px" controls>
+		  <source src="../video/sculpture.mp4" type="video/mp4">
+		</video>
+		<figure>
+			<img src="../images/sculptures/1.jpg" alt="Shqiponja" width="800px" height="600px">
+			<figcaption>
+				1.1 Shqiponja
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="../images/sculptures/2.jpg" alt="Luani" width="800px" height="600px">
+			<figcaption>
+				1.2 Luani
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="../images/sculptures/3.jpg" alt="Fytyrat" width="800px" height="600px">
+			<figcaption>
+				1.3 Fytyrat
+			</figcaption>
+		</figure>
+		<br>
+	</div>
+	
+	<footer>
+		<p>Copyrights © <a href="mailto:info@grupi5.com">Grupi 5</a></p>
+	</footer>
+</body>
+</html>

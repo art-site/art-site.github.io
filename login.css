@@ -1,0 +1,58 @@
+#container {
+	text-align: center;
+	text-transform: uppercase;
+	color: #C0BAB6;
+}
+
+h1:after {
+	content: "LOGIN"
+}
+
+#fjalia {
+	color: white;
+	font-family: Courier New;
+	font-size:20px; 
+	margin:0; 
+	padding:0; 
+	line-height:1.8em;
+}
+
+body {
+	background-image: url(images/pikaso.jpg);
+	height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+a:link {
+	text-decoration: none;
+	outline: none;
+	color: #C0BAB6;
+}
+
+a:visited {
+	color: #C0BAB6;
+}
+
+a:hover {
+	color: #FF9900;
+}
+
+a:active{
+	color: #C0BAB6;
+}
+
+#logo {
+	width: 280px;
+	height: 280px;
+	-webkit-transition: width 1s, height 1s;
+	-moz-transition: width 1s, height 1s;
+	-o-transition: width 1s, height 1s;
+	transition: width 1s, height 1s;
+}
+
+#logo:hover {
+	width: 320px;
+	height: 320px;
+}

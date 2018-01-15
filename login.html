@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html manifest="index_inside.appcache">
+<head>
+	<meta charset="UTF-8">
+	<title>ARTsite</title>
+	<link rel="stylesheet" href="login.css" type="text/css">
+	
+	<script type="text/javascript">
+		function login_validate(){
+			var name = document.getElementById('name').value;
+			var pass = document.getElementById('pass').value;
+			var form = document.getElementById('loginform');
+			if(name == "" || pass == ""){
+				var audio = new Audio("sound/beep.wav" ) ;
+				audio.play();
+				alert('Ju lutem mbushni te gjitha fushat.');
+			}else{
+				localStorage.setItem('name', name);
+				localStorage.setItem('password', pass);
+				sessionStorage.removeItem('email');
+				sessionStorage.removeItem('phone');
+				form.submit();
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<img src="images/aslogo.png" id="logo">
+		</br>
+		<hr>
+		</br>
+		<section id="fjalia">
+			<p>
+			" The goal of art was the vital expression of self. " –
+			<abbr title="Alfred Stieglitz">A.S.</abbr>
+			</p>
+		</section>
+		</br>
+		<hr>
+		</br>
+		
+		<h1></h1>
+		<form method="POST" id="loginform" action="indexin.html" oninput="x.value='Mirë se vini ' + name.value">
+			Artist:<br>
+			<input list="users" type="text" pattern="[A-Za-z\s]{1,30}" id="name" name="name" autofocus autocomplete="off"></br>
+			<datalist id="users">
+			  <option value="Lirona Ejupi">
+			  <option value="Elvisa Gashi">
+			  <option value="Milot Plakolli">
+			  <option value="Rexhep Krasniqi">
+			  <option value="Majlinda Jaha">
+			</datalist>
+			Password:</br> <input type="password" name="password" id="pass"></br>
+			<input type="checkbox">Remember me
+			<br>
+			<input id="loginBtn" type="button" class="button" value="Login" onclick="login_validate()" autofocus><br><br>	
+			<output name="x" for="name"></output><br>
+			<a href="index.html">Continue without logging in...</a><br>
+			<a href="signup.html">Sign Up</a>
+		</form>
+	</div>
+</body>
+</html>

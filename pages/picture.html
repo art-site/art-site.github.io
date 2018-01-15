@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html manifest="index_inside.appcache">
+<head>
+	<meta charset="UTF-8">
+	<title>ARTsite</title>
+	<link rel="stylesheet" href="../main.css" type="text/css">
+	<script src="../js/main.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				$("video").toggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="logo1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<img id="logo" draggable="true" ondragstart="drag(event)" src="../images/aslogo.png" />
+	</div>
+	<div id="logo2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="image"></div>
+	<header>
+		<nav>
+		  <ul>
+			<li><a href="../indexin.html">Home</a></li>
+			<li><a href="picture.html">Picture</a></li>
+			<li><a href="sculpture.html">Sculpture</a></li>
+			<li><a href="../posts/exhibition.html">Exhibition</a></li>
+			<li><a href="myprofile.html">My Profile</a></li>
+			<li><a href="../login.html">Logout</a></li>
+		  </ul>
+		</nav>
+	</header>
+	<br>
+	<div id="container">
+		<h1>Pictures</h1>
+		<button>Shfaq ose fsheh videon</button><br>
+		<video width="800px" height="600px" controls>
+		  <source src="../video/picture.mp4" type="video/mp4">
+		</video>
+		<figure>
+			<img src="../images/pictures/bird.jpg" alt="Zogu" width="800px" height="600px">
+			<figcaption style="border: 1px solid black; outline: 1px solid yellow; outline-offset: 5px;">
+				1.1 Zogu
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="../images/pictures/blackhole.jpg" alt="Vrima e zeze" width="800px" height="600px">
+			<figcaption style="border: 1px solid black; outline: 1px solid violet; outline-offset: 5px;">
+				1.2 Vrima e zeze
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="../images/pictures/galaxy.jpg" alt="Galaksia" width="800px" height="600px">
+			<figcaption style="border: 1px solid black; outline: 1px solid green; outline-offset: 5px;">
+				1.3 Galaksia
+			</figcaption>
+		</figure>
+		<figure>
+			<img src="../images/pictures/programming.jpg" alt="Programimi" width="800px" height="600px">
+			<figcaption style="border: 1px solid black; outline: 1px solid blue; outline-offset: 5px;">
+				1.4 Programimi
+			</figcaption>
+		</figure>
+	</div>
+	
+	<footer>
+		<p>Copyrights © <a href="mailto:info@grupi5.com">Grupi 5</a></p>
+	</footer>
+</body>
+</html>

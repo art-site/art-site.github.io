@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html manifest="index_inside.appcache">
+<head>
+	<meta charset="UTF-8">
+	<title>ARTsite</title>
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<script src="js/main.js"></script>
+	<script>
+		function log_in(){
+			alert('Please login to continue.');
+		}
+	</script>
+</head>
+<body>
+	<div id="logo1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<img id="logo" draggable="true" ondragstart="drag(event)" src="images/aslogo.png" />
+	</div>
+	<div id="logo2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="image"></div>
+	<header>
+		<nav>
+		  <ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#" onclick="log_in()">Picture</a></li>
+			<li><a href="#" onclick="log_in()">Sculpture</a></li>
+			<li><a href="#" onclick="log_in()">Exhibition</a></li>
+			<li><a href="pages/game.html">Game</a></li>
+			<li><a href="login.html">Login</a></li>
+		  </ul>
+		</nav>
+	</header>
+	<br>
+	<div id="container">
+		<br>
+		<section id="pershkrimi">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis urna at ante laoreet ultricies. Proin ut odio quis elit luctus facilisis id quis ligula. Pellentesque id purus accumsan, tincidunt turpis et, tincidunt eros. Morbi vel sem bibendum, porta nisl aliquet, maximus massa. Vivamus malesuada, nibh vitae cursus suscipit, mi sem posuere arcu, at fermentum neque eros quis tellus. Ut libero magna, pharetra nec luctus eu, euismod vel magna. Proin dictum turpis odio, a pellentesque sapien iaculis in. Curabitur a augue nec enim viverra rutrum. Pellentesque in erat lobortis, accumsan velit vitae, aliquet mauris. Praesent lacinia risus sed lorem dictum ultricies. Duis massa nulla, gravida euismod mollis vel, posuere venenatis arcu.
+		</section>
+		<br>
+		<hr>
+		<div id="homepage">
+			<ul>
+				<li class="cereku"><img src="images/article/21.jpg" width="200" height="150" alt=""></li>
+				<li class="cereku"><img src="images/article/32.jpg" width="200" height="150" alt=""></li>
+				<li class="cereku"><img src="images/article/13.jpg" width="200" height="150" alt=""></li>
+				<li class="cereku c_fundit"><img src="images/article/44.jpg" width="200" height="150" alt=""></li>
+			</ul>
+			<p><a href="#">View all articles &raquo;</a></p>
+			<hr>
+			<br>
+			<ul>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/11.jpg" width="64" height="64" alt="Go to article...">
+
+						<strong>I ESCAPE MY FEARS AND SPEND HOURS PAINTING...</strong>
+						<p>
+						Using visual cues from the life around me and combining them with past mistakes, the practice of self-love and world travel, I use painting as a win...
+						</p>
+						<p><a href="login.html">Login to read more &raquo;</a></p>
+					</div>
+				</li>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/21.jpg" width="64" height="64" alt="">
+
+						<strong>FELIX TELLS HIS LIFE STORY THROUGH...</strong>
+						<p>
+						Sudied and stumbled upon a jewish painter who tells his life story through painfully sad self-portraits. Painter who tells his life story...
+						</p>
+						<p><a href="login.html">Login to read more &raquo;</a></p>
+					</div>
+				</li>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/31.jpg" width="64" height="64" alt="">
+
+						<strong>I UPCYCLE OLD LOUIS VUITTON BAGS...</strong>
+						<p>
+						My passion for working with metal and mechanical objects has been essential in the evolution of my art. It provides...
+						</p>
+						<p><a href="login.html">Login to read more &raquo;</a></p>
+					</div>
+				</li>
+				<li class="cereku">
+					<div class="smallpost">
+						<img src="images/article/41.jpg" width="64" height="64" alt="">
+
+						<strong>I TAKE PICTURES THAT LOOK LIKE...</strong>
+						<p>
+						My name is Davide Sasso and I love photography. Japan is a country that I love and I hope one day to be able to go there. I love ja...
+						</p>
+						<p><a href="login.html">Login to read more &raquo;</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<footer>
+		<p>
+		Copyrights © <a href="mailto:info@grupi5.com">Grupi 5</a>
+		<canvas id="myCanvas" width="32" height="32" style="border:1px solid RED;" class="bottom_rotation"></canvas> 
+		</p>
+	</footer>
+</body>
+</html>

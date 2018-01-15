@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html manifest="index_inside.appcache">
+<head>
+	<meta charset="UTF-8">
+	<title>ARTsite</title>
+	<link rel="stylesheet" href="../main.css" type="text/css">
+	<style>
+		#container {
+			text-align: left;
+		}
+
+		table {
+		font-size: 13px;
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width:100%;
+		}
+
+		td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding:4px 0 4px 0;
+		padding-right:3px;
+		text-align: center;    
+		}
+
+		#cost{
+		font-family: "Times New Roman", Times, serif;
+		font-style: italic;
+		}
+
+		#rating{
+		color: orange;
+		}
+
+		#maxrating{
+		color: tomato;
+		font-size: 10px;
+		}
+		
+		#exhibition_pic{
+			transform: rotateX(180deg);
+		}
+		
+		#kolonat {
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+		}
+	</style>
+	<script src="../js/main.js"></script>
+</head>
+<body>
+	<div id="logo1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<img id="logo" draggable="true" ondragstart="drag(event)" src="../images/aslogo.png" />
+	</div>
+	<div id="logo2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="image"></div>
+	<header>
+		<nav>
+		  <ul>
+			<li><a href="../indexin.html">Home</a></li>
+			<li><a href="../pages/picture.html">Picture</a></li>
+			<li><a href="../pages/sculpture.html">Sculpture</a></li>
+			<li><a href="exhibition.html">Exhibition</a></li>
+			<li><a href="../pages/myprofile.html">My Profile</a></li>
+			<li><a href="../login.html">Logout</a></li>
+		  </ul>
+		</nav>
+	</header>
+	<br>
+	<div id="container">
+		<h1>Upcoming Exhibitions</h1>
+		<div align="center">
+		<img src="../images/exhibition.jpg" width="700" height="400" alt="Artikulli 1" id="exhibition_pic">
+		<figcaption>
+		Fig 1.1, Picasso's painting.
+		</figcaption>
+		</div>
+		<p id="kolonat">
+			Exhibitions and conferences involve different types of input and fulfill different functions for the organisations taking part in them. For example, exhibitions tend to be marketing-driven and entrepreneurial in approach, while conferences have traditionally been knowledge-driven and more conservative. Only in recent years have conferences started to incorporate the showier multidimensional techniques of exhibitions.
+			The different ways they disseminate information are important:
+			An exhibition is an event, or marketplace, where one or more sellers display their goods and services to a group of buyers.
+			A conference is a meeting with an organised agenda for delegates who have common education, communication or networking objectives.
+			Exhibitions can be classified into two general types: trade exhibitions and consumer exhibitions
+		</p>
+		<p>
+			The different ways they disseminate information are important:
+			An exhibition is an event, or marketplace, where one or more sellers display their goods and services to a group of buyers.
+			A conference is a meeting with an organised agenda for delegates who have common education, communication or networking objectives.
+			Exhibitions can be classified into two general types: trade exhibitions and consumer exhibitions.
+			Quisque placerat aliquam enim. Suspendisse ornare odio tristique, imperdiet leo eu, scelerisque massa. <mark>Fusce egestas accumsan semper.</mark> Vestibulum quis libero diam. Nam placerat eleifend elit blandit pharetra. 
+		</p>
+
+
+		<table id="tabela" cellpadding="10">
+		  <tr>
+		    <th bgcolor="#D6D6D6">Title</th>
+		    <th bgcolor="#D6D6D6">Authors</th>
+		    <th bgcolor="#D6D6D6">Adress</th> 
+		    <th bgcolor="#D6D6D6">Location</th>
+		    <th bgcolor="#D6D6D6">Starting Date</th>
+		    <th bgcolor="#D6D6D6">Ending Date</th>
+		    <th bgcolor="#D6D6D6">Rating</th>
+		    <th bgcolor="#D6D6D6">Cost</th>
+		    <th bgcolor="#D6D6D6">Comment</th>
+		  </tr>
+		  <tr>
+		    <td><a href="http://www.serpentinegalleries.org/press/2017/11/rose-wylie-quack-quack" target="_blank">'Quack Quack'</a></td>
+		    <td>Rose Wylie</td>
+		    <td><address>'Serpentine Gallery'</address></td>
+		    <td>Knightsbridge</td>
+		    <td>February 20 2018</td>
+		    <td>March 01 2018</td>
+		    <td> <a id="rating">4</a><a id="maxrating">/5</a></td>
+		    <td id="cost">€10</td>
+		    <td>"Rose Wylie is why we need artists. The British painter’s late-career show here at the Serpentine (she’s 83 now, and has only found real recognition in the past few decades) is full of film stars, sportsmen, ducks and dancers. Everyday life, pop culture, war, it’s all squidged in here ..."</td>
+		  </tr>
+		    <tr>
+		    <td>'Tears of 90s'</td>
+		    <td>Erion Metolli</td>
+		    <td>'Ibrahim Lutfiu'</td>
+		    <td><address>Prishtine</address></td>
+		    <td>February 01 2018</td>
+		    <td>February 11 2018</td>
+		    <td> <a id="rating">3.5</a><a id="maxrating">/5</a></td>
+		    <td id="cost">€7</td>
+		    <td>"Kosovo War the brutality and pain in wich the citizens came accros while the war touched the emotional and mental state, those feeling are exposed by artistic views from both sides of the war by pictures, sculptures and photos which represent ..."</td>
+		  </tr>
+		    <tr>
+		    <td>'Cézanne Portraits'</td>
+		    <td>Paul Cézanne</td>
+		    <td><address>'National Portrait Gallery'</address></td>
+		    <td>Leicester Square</td>
+		    <td>January 20 2018</td>
+		    <td>February 05 2018</td>
+		    <td> <a id="rating">4.9</a><a id="maxrating">/5</a></td>
+		    <td id="cost">€20</td>
+		    <td>"The love of Paul Cézanne’s life was a mountain. Not his wife, or his son, or his friends, or his parents. The great impressionist master was besotted with a bloody mountain. Over and over again he painted Mont Sainte-Victoire in Provence, obsessively, repetitively, like a lustful stalker with a paintbrush. People, for Cézanne, always came second ..."</td>
+		  </tr>
+		  <tr>
+		    <td>'Cézanne Portraits'</td>
+		    <td>Paul Cézanne</td>
+		    <td><address>'National Portrait Gallery'</address></td>
+		    <td>Leicester Square</td>
+		    <td>January 20 2018</td>
+		    <td>February 05 2018</td>
+		    <td> <a id="rating">4.9</a><a id="maxrating">/5</a></td>
+		    <td id="cost">€20</td>
+		    <td>"The love of Paul Cézanne’s life was a mountain. Not his wife, or his son, or his friends, or his parents. The great impressionist master was besotted with a bloody mountain. Over and over again he painted Mont Sainte-Victoire in Provence, obsessively, repetitively, like a lustful stalker with a paintbrush. People, for Cézanne, always came second ..."</td>
+		  </tr>
+		  <tr>
+		    <td>'Cézanne Portraits'</td>
+		    <td>Paul Cézanne</td>
+		    <td><address>'National Portrait Gallery'</address></td>
+		    <td>Leicester Square</td>
+		    <td>January 20 2018</td>
+		    <td>February 05 2018</td>
+		    <td> <a id="rating">4.9</a><a id="maxrating">/5</a></td>
+		    <td id="cost">€20</td>
+		    <td>"The love of Paul Cézanne’s life was a mountain. Not his wife, or his son, or his friends, or his parents. The great impressionist master was besotted with a bloody mountain. Over and over again he painted Mont Sainte-Victoire in Provence, obsessively, repetitively, like a lustful stalker with a paintbrush. People, for Cézanne, always came second ..."</td>
+		  </tr>
+		</table>
+
+
+	</div>
+	
+	<footer>
+		<p>Copyrights © <a href="mailto:info@grupi5.com">Grupi 5</a></p>
+	</footer>
+</body>
+</html>
